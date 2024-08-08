@@ -10,7 +10,7 @@ Hi, I'm Vachan. I like to build and train Deep Neural Networks from scratch.
 [**Diffusion-Transformers**](https://github.com/VachanVY/Diffusion-Transformers): On going project... Not Public for now...
 
 ## [**Mugen**]()
-* Going to make a website for music generation completely from scratch using *Pytorch*. On going project... Not Open Source
+* Going to make a website for music generation completely from scratch using *Pytorch*. On going project...
 * ### Models for this Project
   * Non Autoregressive Transformer
   * Autoregressive Transformer
