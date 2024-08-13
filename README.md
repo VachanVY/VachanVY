@@ -35,7 +35,7 @@ Hi, I'm Vachan. I like to build and train Deep Neural Networks from scratch.
 ## [**Vision-Transformers**](https://github.com/VachanVY/Vision-Transformers): 
 * Vision Transformers in `jax`, trained on `MNIST` dataset
 
-## [**Mugen**]()
+## **Mugen**
 * Going to make a website for music generation completely from scratch using *Pytorch*. On-going project...
 * ### Models for this Project
   * - [x] Non Autoregressive Transformer
