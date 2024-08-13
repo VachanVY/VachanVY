@@ -1,7 +1,7 @@
 Hi, I'm Vachan. I like to build and train Deep Neural Networks from scratch.
 
 # Projects:
-[**NeuroForge**](https://github.com/VachanVY/NeuroForge):
+## [**NeuroForge**](https://github.com/VachanVY/NeuroForge):
 * [Neural Networks](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#neural-networks) => [*nn.ipynb*](https://github.com/VachanVY/NeuroForge/blob/main/nn.ipynb)
   * [Logistic Regression](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
   * [MLP](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
@@ -21,7 +21,8 @@ Hi, I'm Vachan. I like to build and train Deep Neural Networks from scratch.
   * [AdamW](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#adam-and-adamw-adam-with-weight-decay-optimizers)
 
 
-[**gpt.jax**](https://github.com/VachanVY/gpt.jax): GPT written in jax, trained on the tinystories dataset
+## [**gpt.jax**](https://github.com/VachanVY/gpt.jax): 
+* GPT written in jax, trained on the tinystories dataset
   | Model-Params       |`d_model`| `n_heads`  | `maximum_context_length` | `num_layers`  | `vocab_size` | Estimated Validation Loss   |
   | :-------------:    |:-------:|:----------:|:------------------------:|:--------------|:------------:|:-------------------------:  |
   | *280K*             |   64    |     8      |           512            |       5       |      512     |      **1.33**             |
@@ -30,14 +31,13 @@ Hi, I'm Vachan. I like to build and train Deep Neural Networks from scratch.
   | *110M*             |   768   |     12     |           2048           |       12      |     32000    |      **TODO**               |
 
 
-[**Vision-Transformers**](https://github.com/VachanVY/Vision-Transformers): Vision Transformers in jax, trained on MNIST dataset
-
-[**Diffusion-Transformers**](https://github.com/VachanVY/Diffusion-Transformers): On going project... Not Public for now...
+## [**Vision-Transformers**](https://github.com/VachanVY/Vision-Transformers): 
+* Vision Transformers in jax, trained on MNIST dataset
 
 ## [**Mugen**]()
-* Going to make a website for music generation completely from scratch using *Pytorch*. On going project...
+* Going to make a website for music generation completely from scratch using *Pytorch*. On-going project...
 * ### Models for this Project
-  * Non Autoregressive Transformer
-  * Autoregressive Transformer
-  * Diffusion Transformer
+  * - [x] Non Autoregressive Transformer
+  * - [ ] Autoregressive Transformer
+  * - [ ] Diffusion Transformer
 
