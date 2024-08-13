@@ -22,6 +22,13 @@ Hi, I'm Vachan. I like to build and train Deep Neural Networks from scratch.
 
 
 [**gpt.jax**](https://github.com/VachanVY/gpt.jax): GPT written in jax, trained on the tinystories dataset
+  | Model-Params       |`d_model`| `n_heads`  | `maximum_context_length` | `num_layers`  | `vocab_size` | Estimated Validation Loss   |
+  | :-------------:    |:-------:|:----------:|:------------------------:|:--------------|:------------:|:-------------------------:  |
+  | *280K*             |   64    |     8      |           512            |       5       |      512     |      **1.33**             |
+  | *15M*              |   288   |     6      |           256            |       6       |     32000    |      **1.19**             |
+  | *45M*              |   512   |     8      |           1024           |       8       |     32000    |      **TODO**               |
+  | *110M*             |   768   |     12     |           2048           |       12      |     32000    |      **TODO**               |
+
 
 [**Vision-Transformers**](https://github.com/VachanVY/Vision-Transformers): Vision Transformers in jax, trained on MNIST dataset
 
