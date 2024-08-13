@@ -2,6 +2,7 @@ Hi, I'm Vachan. I like to build and train Deep Neural Networks from scratch.
 
 # Projects:
 ## [**NeuroForge**](https://github.com/VachanVY/NeuroForge):
+* Implemented Neural Network (Forward and Backward Propagation), Batchnorm and Layernorm, Dropout from scratch without using `torch.nn`, used only `torch.tensor`
 * [Neural Networks](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#neural-networks) => [*nn.ipynb*](https://github.com/VachanVY/NeuroForge/blob/main/nn.ipynb)
   * [Logistic Regression](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
   * [MLP](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
@@ -22,8 +23,8 @@ Hi, I'm Vachan. I like to build and train Deep Neural Networks from scratch.
 
 
 ## [**gpt.jax**](https://github.com/VachanVY/gpt.jax): 
-* GPT written in jax, trained on the tinystories dataset
-  | Model-Params       |`d_model`| `n_heads`  | `maximum_context_length` | `num_layers`  | `vocab_size` | Estimated Validation Loss   |
+* GPT written in `jax`, trained on `tiny shakespeare dataset (1.1 MB text data)` and scaled it on the `tiny stories dataset (~2 GB text data)`
+  | Model-Params       |`d_model`| `n_heads`  | `maximum_context_length` | `num_layers`  | `vocab_size` | Estimated Validation Loss on tiny stories dataset   |
   | :-------------:    |:-------:|:----------:|:------------------------:|:--------------|:------------:|:-------------------------:  |
   | *280K*             |   64    |     8      |           512            |       5       |      512     |      **1.33**             |
   | *15M*              |   288   |     6      |           256            |       6       |     32000    |      **1.19**             |
@@ -32,7 +33,7 @@ Hi, I'm Vachan. I like to build and train Deep Neural Networks from scratch.
 
 
 ## [**Vision-Transformers**](https://github.com/VachanVY/Vision-Transformers): 
-* Vision Transformers in jax, trained on MNIST dataset
+* Vision Transformers in `jax`, trained on `MNIST` dataset
 
 ## [**Mugen**]()
 * Going to make a website for music generation completely from scratch using *Pytorch*. On-going project...
