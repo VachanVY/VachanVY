@@ -1,4 +1,4 @@
-Hi, I'm Vachan. I like to build and train Deep Neural Networks from scratch.
+Hi, I'm Vachan. I like building and training Deep Neural Networks from the ground up.
 
 # Projects:
 ## [**NeuroForge**](https://github.com/VachanVY/NeuroForge):
@@ -25,20 +25,47 @@ Hi, I'm Vachan. I like to build and train Deep Neural Networks from scratch.
 ## [**gpt.jax**](https://github.com/VachanVY/gpt.jax): 
 * GPT written in `jax`, trained on `tiny shakespeare dataset (1.1 MB text data)` and scaled it on the `tiny stories dataset (~2 GB text data)`
   | Model-Params       |`d_model`| `n_heads`  | `maximum_context_length` | `num_layers`  | `vocab_size` | Estimated Validation Loss on tiny stories dataset   |
-  | :-------------:    |:-------:|:----------:|:------------------------:|:--------------|:------------:|:-------------------------:  |
+  | :-------------:    |:-------:|:----------:|:------------------------:|:--------------|:------------:|:-------------------------:|
   | *280K*             |   64    |     8      |           512            |       5       |      512     |      **1.33**             |
   | *15M*              |   288   |     6      |           256            |       6       |     32000    |      **1.19**             |
-  | *45M*              |   512   |     8      |           1024           |       8       |     32000    |      **TODO**               |
-  | *110M*             |   768   |     12     |           2048           |       12      |     32000    |      **TODO**               |
+  | *45M*              |   512   |     8      |           1024           |       8       |     32000    |      **TODO**             |
+  | *110M*             |   768   |     12     |           2048           |       12      |     32000    |      **TODO**             |
+* Model: `15M` | Prompt: `Once upon a time,` | Sampling Technique: `Greedy sampling`
+    ```
+    Once upon a time, there was a little girl named Lily. She loved to play with her toys and eat yummy food. One day, she found a big, round thing in her room. It was a microscope. Lily was very curious about it.
+    Lily wanted to see what was inside the microscope. She tried to open it, but it was very hard. She tried and tried, but she could not open it. Lily felt sad and wanted to find a way to open the microscope.
+    Then, Lily had an idea. She asked her mom for help. Her mom showed her how to open the microscope. Lily was so happy! She looked through the microscope and saw many tiny things. She was so excited to see the tiny things. Lily and her mom had a fun day together.
+    ```
+* Prompt: `Once upon a time, in a big forest, there was a fearful little dog named Spot` | Sampling Technique: `Greedy sampling`
+    ```
+    Once upon a time, in a big forest, there was a fearful little dog named Spot. Spot was scared of many things. One day, Spot saw a big tree with a hole in it. He thought, "I want to see what is inside the hole."
+    Spot went to the tree and looked inside the hole. He saw a little bird with a hurt wing. Spot said, "I will help you, little bird." He used his paw to gently lift the bird out of the hole. The bird was very happy and said, "Thank you, Spot!"
+    Spot and the bird became good friends. They played together in the forest every day. Spot learned that it is good to help others, even if they are scared of something. And they lived happily ever after.
+    ```
 
+## [**Diffusion Transformers**](https://github.com/VachanVY/diffusion-transformer)
+* [**CelebA**](https://github.com/VachanVY/diffusion-transformer?tab=readme-ov-file#celeba) 
+   * **[Generated-images](https://github.com/VachanVY/diffusion-transformer?tab=readme-ov-file#generated-images)** <====== See the Model Generated Images here
+   * **[Training-insights](https://github.com/VachanVY/diffusion-transformer?tab=readme-ov-file#training-insights)**
+* **[MNIST-experiment](https://github.com/VachanVY/diffusion-transformer?tab=readme-ov-file#mnist-experiment)**
+   * [**Training on MNIST**](https://github.com/VachanVY/diffusion-transformer?tab=readme-ov-file#training-on-mnist)
+* **[Diffusion-Transformers Paper Summary](https://github.com/VachanVY/diffusion-transformer?tab=readme-ov-file#latent-diffusion-models)**
 
-## [**Vision-Transformers**](https://github.com/VachanVY/Vision-Transformers): 
+## [**ViViT**](https://github.com/VachanVY/ViVIT):
+* Video Vision Transformer in PyTorch
+* Test trained on MNIST images by stacking images of the same digit in the time dimension
+* TODO: Scale the model and train it on a proper large dataset...
+
+## [**Vision-Transformers**](https://github.com/VachanVY/Vision-Transformers):
 * Vision Transformers in `jax`, trained on `MNIST` dataset
+* TODO: Scale ViT and train on a larger dataset
 
 ## **Mugen**
-* Going to make a website for music generation completely from scratch using *Pytorch*. On-going project...
+* Going to make a website for music generation using *Pytorch* only. On-going project...
+* TODO: Test train it on the MusicBench dataset, takes 5 seconds/step on my GPU, very slow...
+* TODO: Scale on large lyrical music datasets
+* Repeat for the below models
 * ### Models for this Project
-  * - [x] Non Autoregressive Transformer
+  * - [x] [Non Autoregressive Transformer](https://github.com/VachanVY/MAGNeT)
   * - [ ] Autoregressive Transformer
   * - [ ] Diffusion Transformer
-
