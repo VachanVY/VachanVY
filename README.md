@@ -2,7 +2,7 @@ Hi, I'm Vachan. I like building and training Deep Neural Networks from the groun
 
 # Projects:
 ## [**NeuroForge**](https://github.com/VachanVY/NeuroForge):
-* Implemented Neural Network (Forward and Backward Propagation), Batchnorm and Layernorm, Dropout from scratch without using `torch.nn`, used only `torch.tensor`
+* Implemented Neural Network (Forward and Backward Propagation), Batchnorm and Layernorm, Dropout from scratch **without using `torch.nn`, used only `torch.tensor`**
 * [Neural Networks](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#neural-networks) => [*nn.ipynb*](https://github.com/VachanVY/NeuroForge/blob/main/nn.ipynb)
   * [Logistic Regression](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
   * [MLP](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
