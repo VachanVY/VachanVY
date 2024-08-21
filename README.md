@@ -50,6 +50,13 @@ Hi, I'm Vachan. I like building and training Deep Neural Networks from the groun
 * **[MNIST-experiment](https://github.com/VachanVY/diffusion-transformer?tab=readme-ov-file#mnist-experiment)**
    * [**Training on MNIST**](https://github.com/VachanVY/diffusion-transformer?tab=readme-ov-file#training-on-mnist)
 * **[Diffusion-Transformers Paper Summary](https://github.com/VachanVY/diffusion-transformer?tab=readme-ov-file#latent-diffusion-models)**
+* Some generated images:\
+    <img src="https://github.com/user-attachments/assets/6cbe6bc7-1e7a-44ed-83ae-df64c40bf8d4" alt="Alt text" width="300">
+    <img src="https://github.com/user-attachments/assets/181f31fe-4b4c-4719-93df-f3d767853608" alt="Alt text" width="300">
+    <img src="https://github.com/user-attachments/assets/eb463c13-45b2-474e-a431-b3b296fe00c4" alt="Alt text" width="300">
+    <img src="https://github.com/user-attachments/assets/2048e0ba-4ebd-48f1-a379-df39680495f9" alt="Alt text" width="300">
+    <img src="https://github.com/user-attachments/assets/e7bea3b5-ce52-4de6-a03e-a7694e66b320" alt="Alt text" width="300">
+    <img src="https://github.com/user-attachments/assets/fe7d1f7d-f7a8-4059-a1f2-172a0e2345d5" alt="Alt text" width="300">
 
 ## [**ViViT**](https://github.com/VachanVY/ViVIT):
 * Video Vision Transformer in PyTorch
@@ -62,7 +69,7 @@ Hi, I'm Vachan. I like building and training Deep Neural Networks from the groun
 
 ## **Mugen**
 * Going to make a website for music generation using *Pytorch* only. On-going project...
-* TODO: Test train it on the MusicBench dataset, takes 5 seconds/step on my GPU, very slow...
+* TODO: Test train it on the MusicBench dataset, takes 5 seconds/step on my GPU, very slow... need GPUs
 * TODO: Scale on large lyrical music datasets
 * Repeat for the below models
 * ### Models for this Project
