@@ -21,8 +21,25 @@ Hi, I'm Vachan. I like building and training Deep Neural Networks from the groun
   * [Adam](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#adam-and-adamw-adam-with-weight-decay-optimizers)
   * [AdamW](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#adam-and-adamw-adam-with-weight-decay-optimizers)
 
+## Transformers
+```mermaid
+graph TD;
+    Transformers -->|Text| GPT;
+    Transformers -->|Images| Vision_Transformers["Vision Transformers"];
+    Transformers -->|Diffusion| Diffusion_Transformers["Diffusion Transformers"];
+    Transformers -->|Audio| MAGNeT["MAGNeT"];
+    Transformers --> |Video| Video_Vision_Transformers["Video Vision Transformers"];
 
-## [**gpt.jax**](https://github.com/VachanVY/gpt.jax): 
+    GPT --> Multi_Modal_Transformers["Multi-Modal Transformers\n(TODO)"];
+    Vision_Transformers --> Multi_Modal_Transformers;
+    Diffusion_Transformers --> Multi_Modal_Transformers;
+    MAGNeT --> Multi_Modal_Transformers;
+    Video_Vision_Transformers --> Multi_Modal_Transformers
+
+```
+
+
+### [**gpt.jax**](https://github.com/VachanVY/gpt.jax): 
 * GPT written in `jax`, trained on `tiny shakespeare dataset (1.1 MB text data)` and scaled it on the `tiny stories dataset (~2 GB text data)`
   | Model-Params       |`d_model`| `n_heads`  | `maximum_context_length` | `num_layers`  | `vocab_size` | Estimated Validation Loss on tiny stories dataset   |
   | :-------------:    |:-------:|:----------:|:------------------------:|:--------------|:------------:|:-------------------------:|
@@ -43,7 +60,7 @@ Hi, I'm Vachan. I like building and training Deep Neural Networks from the groun
     Spot and the bird became good friends. They played together in the forest every day. Spot learned that it is good to help others, even if they are scared of something. And they lived happily ever after.
     ```
 
-## [**Diffusion Transformers**](https://github.com/VachanVY/diffusion-transformer)
+### [**Diffusion Transformers**](https://github.com/VachanVY/diffusion-transformer)
 * [**CelebA**](https://github.com/VachanVY/diffusion-transformer?tab=readme-ov-file#celeba) 
    * **[Generated-images](https://github.com/VachanVY/diffusion-transformer?tab=readme-ov-file#generated-images)** <====== See the Model Generated Images here
    * **[Training-insights](https://github.com/VachanVY/diffusion-transformer?tab=readme-ov-file#training-insights)**
@@ -58,16 +75,16 @@ Hi, I'm Vachan. I like building and training Deep Neural Networks from the groun
     <img src="https://github.com/user-attachments/assets/e7bea3b5-ce52-4de6-a03e-a7694e66b320" alt="Alt text" width="300">
     <img src="https://github.com/user-attachments/assets/fe7d1f7d-f7a8-4059-a1f2-172a0e2345d5" alt="Alt text" width="300">
 
-## [**ViViT**](https://github.com/VachanVY/ViVIT):
+### [**ViViT**](https://github.com/VachanVY/ViVIT):
 * Video Vision Transformer in PyTorch
 * Test trained on MNIST images by stacking images of the same digit in the time dimension
 * TODO: Scale the model and train it on a proper large dataset...
 
-## [**Vision-Transformers**](https://github.com/VachanVY/Vision-Transformers):
+### [**Vision-Transformers**](https://github.com/VachanVY/Vision-Transformers):
 * Vision Transformers in `jax`, trained on `MNIST` dataset
 * TODO: Scale ViT and train on a larger dataset
 
-## **Mugen**
+### **Mugen**
 * Going to make a website for music generation using *Pytorch* only. On-going project...
 * TODO: Test train it on the MusicBench dataset, takes 5 seconds/step on my GPU, very slow... need GPUs
 * TODO: Scale on large lyrical music datasets
