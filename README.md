@@ -26,13 +26,12 @@ Hi, I'm Vachan. I like building and training Deep Neural Networks from the groun
 graph TD;
     Transformers -->|Text| GPT;
     Transformers -->|Images| Vision_Transformers["Vision Transformers"];
-    Transformers -->|Diffusion| Diffusion_Transformers["Diffusion Transformers"];
     Transformers -->|Audio| MAGNeT["MAGNeT"];
     Transformers --> |Video| Video_Vision_Transformers["Video Vision Transformers"];
+    Transformers -->|Diffusion| Diffusion_Transformers["Diffusion Transformers"];
 
     GPT --> Multi_Modal_Transformers["Multi-Modal Transformers\n(TODO)"];
     Vision_Transformers --> Multi_Modal_Transformers;
-    Diffusion_Transformers --> Multi_Modal_Transformers;
     MAGNeT --> Multi_Modal_Transformers;
     Video_Vision_Transformers --> Multi_Modal_Transformers
 
