@@ -34,6 +34,7 @@ graph TD;
     Vision_Transformers --> Multi_Modal_Transformers;
     MAGNeT --> Multi_Modal_Transformers;
     Video_Vision_Transformers --> Multi_Modal_Transformers
+    Diffusion_Transformers --> Multi_Modal_Transformers
 
 ```
 
