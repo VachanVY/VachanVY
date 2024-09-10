@@ -30,7 +30,8 @@ graph TD;
     Transformers --> |Video| Video_Vision_Transformers["Video Vision Transformers"];
     Transformers -->|Diffusion| Diffusion_Transformers["Diffusion Transformers"];
 
-    GPT --> Multi_Modal_Transformers["Transfusion"];
+    GPT --> Multi_Modal_Transformers["Transfusion
+(Multi-Modal Transformer)"];
     Vision_Transformers --> Multi_Modal_Transformers;
     MAGNeT --> Multi_Modal_Transformers;
     Video_Vision_Transformers --> Multi_Modal_Transformers
