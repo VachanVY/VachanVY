@@ -30,13 +30,12 @@ graph TD;
     Transformers --> |Video| Video_Vision_Transformers["Video Vision Transformers"];
     Transformers -->|Diffusion| Diffusion_Transformers["Diffusion Transformers"];
 
-    GPT --> Multi_Modal_Transformers["Multi-Modal Transformers\n(TODO)"];
+    GPT --> Multi_Modal_Transformers["Transfusion"];
     Vision_Transformers --> Multi_Modal_Transformers;
     MAGNeT --> Multi_Modal_Transformers;
     Video_Vision_Transformers --> Multi_Modal_Transformers
 
 ```
-
 
 ### [**gpt.jax**](https://github.com/VachanVY/gpt.jax): 
 * GPT written in `jax`, trained on `tiny shakespeare dataset (1.1 MB text data)` and scaled it on the `tiny stories dataset (~2 GB text data)`
@@ -84,11 +83,14 @@ graph TD;
 * TODO: Scale ViT and train on a larger dataset
 
 ### **Mugen**
-* Going to make a website for music generation using *Pytorch* only. On-going project...
+<!-- * Going to make a website for music generation using *Pytorch* only. On-going project...
 * TODO: Test train it on the MusicBench dataset, takes 5 seconds/step on my GPU, very slow... need GPUs
 * TODO: Scale on large lyrical music datasets
-* Repeat for the below models
+* Repeat for the below models -->
 * ### Models for this Project
   * - [x] [Non Autoregressive Transformer](https://github.com/VachanVY/MAGNeT)
   * - [ ] Autoregressive Transformer
   * - [ ] Diffusion Transformer
+
+### [Transfusion-Multi-Modal Transformer](https://github.com/VachanVY/Transfusion.torch)
+* ...
