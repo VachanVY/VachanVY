@@ -95,4 +95,8 @@ graph TD;
   * - [ ] Diffusion Transformer
 
 ### [Transfusion-Multi-Modal Transformer](https://github.com/VachanVY/Transfusion.torch)
-* ...
+* Transfusion is a Multi-Modal Transformer, it can generate text like GPTs and images like Diffusion Models, all at once in one go not separately!
+* It can easily switch between text and image modalities for generations, and it is nothing complicated, just a single transformer with some modality-specific components!
+* This can easily be extended to other modalities like videos, audio, etc, but for now, it can only take images and text as input
+* **`TODO`: Train on a large Multi-Modal Dataset (something like tiny stories dataset with images in between illustrating the story...?)**
+
