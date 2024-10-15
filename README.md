@@ -1,4 +1,6 @@
 Hi, I'm Vachan. I like building and training Deep Neural Networks from the ground up.
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" /><br>
+
 
 # Projects:
 ## [**NeuroForge**](https://github.com/VachanVY/NeuroForge):
@@ -99,4 +101,11 @@ graph TD;
 * It can easily switch between text and image modalities for generations, and it is nothing complicated, just a single transformer with some modality-specific components!
 * This can easily be extended to other modalities like videos, audio, etc, but for now, it can only take images and text as input
 * **`TODO`: Train on a large Multi-Modal Dataset (something like tiny stories dataset with images in between illustrating the story...?)**
+
+
+<img  src="https://github-profile-trophy.vercel.app/?username=VachanVY&theme=gruvbox&row=1&column=6&no-frame=true&no-bg=true" /><br>
+
+<img height="137px" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=VachanVY&hide_title=true&hide_border=true&show_icons=trueline_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" />
+
+<img height="137px" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=VachanVY&hide_title=true&hide_border=true&layout=compact&langs_count=6&text_color=000&icon_color=fff&bg_color=0,52fa5a,4dfcff,c64dff&theme=graywhite" /><br><br>
 
