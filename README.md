@@ -1,4 +1,5 @@
-Hi, I'm Vachan. I like building and training Deep Neural Networks from the ground up.
+Hi, I'm Vachan!
+* Deep Learning from First Principles, Systems Programming.
 <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" /><br>
 
 
