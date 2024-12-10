@@ -1,6 +1,10 @@
-Hi, I'm Vachan!
-* Deep Learning from First Principles, Systems Programming.
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" /><br>
+Hi, I'm Vachan! 
+
+**Deep Learning and Systems Programming**
+
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" /><be>
+<img src="https://github.com/user-attachments/assets/e173e76b-22a4-46dd-ad09-2b65ab9ed605" alt="Description" width="300">
+
 
 
 # Projects:
@@ -78,24 +82,26 @@ graph TD;
     <img src="https://github.com/user-attachments/assets/e7bea3b5-ce52-4de6-a03e-a7694e66b320" alt="Alt text" width="300">
     <img src="https://github.com/user-attachments/assets/fe7d1f7d-f7a8-4059-a1f2-172a0e2345d5" alt="Alt text" width="300">
 
-### [**ViViT**](https://github.com/VachanVY/ViVIT):
+<!-- ### [**ViViT**](https://github.com/VachanVY/ViVIT):
 * Video Vision Transformer in PyTorch
 * Test trained on MNIST images by stacking images of the same digit in the time dimension
 * TODO: Scale the model and train it on a proper large dataset...
 
 ### [**Vision-Transformers**](https://github.com/VachanVY/Vision-Transformers):
 * Vision Transformers in `jax`, trained on `MNIST` dataset
-* TODO: Scale ViT and train on a larger dataset
+* TODO: Scale ViT and train on a larger dataset -->
 
+<!-- 
 ### **Mugen**
-<!-- * Going to make a website for music generation using *Pytorch* only. On-going project...
+* Going to make a website for music generation using *Pytorch* only. On-going project...
 * TODO: Test train it on the MusicBench dataset, takes 5 seconds/step on my GPU, very slow... need GPUs
 * TODO: Scale on large lyrical music datasets
-* Repeat for the below models -->
+* Repeat for the below models
 * ### Models for this Project
   * - [x] [Non Autoregressive Transformer](https://github.com/VachanVY/MAGNeT)
   * - [ ] Autoregressive Transformer
   * - [ ] Diffusion Transformer
+-->
 
 ### [Transfusion (A Multi-Modal Transformer)](https://github.com/VachanVY/Transfusion.torch)
 * Transfusion is a Multi-Modal Transformer, it can generate text like GPTs and images like Diffusion Models, all at once in one go not separately!
