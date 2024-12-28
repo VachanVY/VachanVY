@@ -103,6 +103,47 @@ graph TD;
   * - [ ] Diffusion Transformer
 -->
 
+# [Reinforcement-Learning](https://github.com/VachanVY/Reinforcement-Learning)
+> Below links don't redirect anywhere, gotta refactor the code and add links, for now go to the repo directly👆
+## Reinforcement Learning: An Introduction by Andrew Barto and Richard S. Sutton
+* [Dynamic Programming]()
+  * [Policy Iteration - Policy Evaluation & Policy Iteration]()
+  * Value Iteration **TODO**
+* [Monte-Carlo Methods]()
+  * [Monte Carlo Exploring Starts]()
+* [Temporal-Difference (Tabular)]()
+  * [Sarsa]()
+  * [Q-learning]()
+  * [Expected Sarsa]()
+  * Double Q-learning **(TODO)**
+* [n-step Bootstrapping (**TODO**)]
+* Planning and Learning with Tabular Methods (**TODO**)
+* [On-policy Prediction with Approximation]()
+  * Covered in [Papers]() Section, where we use function approximators like Neural Networks for RL
+* On-policy Control with Approximation (**TODO**)
+* Off-policy Methods with Approximation (**TODO**)
+* Eligibility Traces (**TODO**)
+* [Policy Gradient Methods]()
+  * [Monte-Carlo Policy-Gradient]()
+  * [REINFORCE with Baseline]()
+  * [One-Step Actor-Critic]()
+  * Policy Gradient on Continuous Actions (**TODO**)
+
+---
+## Reinforcement Learning: Paper Implementations
+* [2013: Playing Atari with Deep Reinforcement Learning]()
+* Prioritized DDQN || 2015: Deep Reinforcement Learning with Double Q-learning **+** 2016 Prioritized Experience Replay || **(TODO)**
+* [2017: Proximal Policy Optimization (PPO)]()
+* 2014: Deterministic Policy Gradient **(TODO)**
+* 2018: Soft Actor-Critic **(TODO)**
+* AlphaGo, AlphaZero, AlphaFold, etc: **(TODO)**
+  * 2017: Mastering the game of go without human knowledge
+  * 2017: AlphaZero
+  * 2020: Mastering Atari, Go, chess and shogi by planning with a learned model
+  * 20xx: AlphaFold
+* (many more to be added...)
+---
+
 ### [Transfusion (A Multi-Modal Transformer)](https://github.com/VachanVY/Transfusion.torch)
 * Transfusion is a Multi-Modal Transformer, it can generate text like GPTs and images like Diffusion Models, all at once in one go not separately!
 * It can easily switch between text and image modalities for generations, and it is nothing complicated, just a single transformer with some modality-specific components!
