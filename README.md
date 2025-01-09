@@ -37,13 +37,19 @@ graph TD;
     Transformers --> |Video| Video_Vision_Transformers["Video Vision Transformers"];
     Transformers -->|Diffusion| Diffusion_Transformers["Diffusion Transformers"];
 
-    GPT --> Multi_Modal_Transformers["Transfusion
-(Multi-Modal Transformer)"];
+    GPT --> Multi_Modal_Transformers["Multi-Modal Transformer (Transfusion)"];
     Vision_Transformers --> Multi_Modal_Transformers;
     MAGNeT --> Multi_Modal_Transformers;
-    Video_Vision_Transformers --> Multi_Modal_Transformers
-    Diffusion_Transformers --> Multi_Modal_Transformers
+    Video_Vision_Transformers --> Multi_Modal_Transformers;
+    Diffusion_Transformers --> Multi_Modal_Transformers;
 
+    Multi_Modal_Transformers --> LLMs["Large Language Models (LLMs)"];
+    RLHF["Reinforcement Learning from Human Feedback (RLHF)"] --> LLMs;
+
+    Reinforcement_Learning --> RLHF;
+
+    LLMs --> Agentic_LLMs["Agentic LLMs"];
+    Reinforcement_Learning --> Agentic_LLMs;
 ```
 
 ### [**gpt.jax**](https://github.com/VachanVY/gpt.jax): 
