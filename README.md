@@ -114,35 +114,35 @@ graph TD;
 ## Reinforcement Learning: An Introduction by Andrew Barto and Richard S. Sutton
 * [Dynamic Programming]()
   * [Policy Iteration - Policy Evaluation & Policy Iteration]()
-  * Value Iteration **TODO**
+  * [Value Iteration]()
 * [Monte-Carlo Methods]()
   * [Monte Carlo Exploring Starts]()
 * [Temporal-Difference (Tabular)]()
   * [Sarsa]()
   * [Q-learning]()
   * [Expected Sarsa]()
-  * Double Q-learning **(TODO)**
-* [n-step Bootstrapping (**TODO**)]
-* Planning and Learning with Tabular Methods (**TODO**)
+  * [Double Q-learning]()
+* n-step Bootstrapping
+* Planning and Learning with Tabular Methods
 * [On-policy Prediction with Approximation]()
   * Covered in [Papers]() Section, where we use function approximators like Neural Networks for RL
-* On-policy Control with Approximation (**TODO**)
-* Off-policy Methods with Approximation (**TODO**)
-* Eligibility Traces (**TODO**)
+* On-policy Control with Approximation
+* Off-policy Methods with Approximation
+* Eligibility Traces
 * [Policy Gradient Methods]()
   * [Monte-Carlo Policy-Gradient]()
   * [REINFORCE with Baseline]()
   * [One-Step Actor-Critic]()
-  * Policy Gradient on Continuous Actions (**TODO**)
+  * Policy Gradient on Continuous Actions
 
 ---
 ## Reinforcement Learning: Paper Implementations
 * [2013: Playing Atari with Deep Reinforcement Learning]()
 * Prioritized DDQN || 2015: Deep Reinforcement Learning with Double Q-learning **+** 2016 Prioritized Experience Replay || **(TODO)**
 * [2017: Proximal Policy Optimization (PPO)]()
-* 2014: Deterministic Policy Gradient **(TODO)**
-* 2018: Soft Actor-Critic **(TODO)**
-* AlphaGo, AlphaZero, AlphaFold, etc: **(TODO)**
+* [2014: Deterministic Policy Gradient]()
+* [2018: Soft Actor-Critic]()
+* AlphaGo, AlphaZero, AlphaFold, etc:
   * 2017: Mastering the game of go without human knowledge
   * 2017: AlphaZero
   * 2020: Mastering Atari, Go, chess and shogi by planning with a learned model
