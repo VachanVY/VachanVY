@@ -48,8 +48,8 @@ graph TD;
 
     Reinforcement_Learning --> RLHF;
 
-    LLMs --> Agentic_LLMs["Agentic LLMs"];
-    Reinforcement_Learning --> Agentic_LLMs;
+    LLMs --> Reasoning_LLMs["Reasoning LLMs"];
+    Reinforcement_Learning --> Reasoning_LLMs;
 ```
 
 ### [**gpt.jax**](https://github.com/VachanVY/gpt.jax): 
