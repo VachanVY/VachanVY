@@ -1,4 +1,4 @@
-Hi, I'm Vachan! **I like Deep Learning and Systems Programming**
+Hi, I'm Vachan!
 
 <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" /><be>
 <img src="https://github.com/user-attachments/assets/e173e76b-22a4-46dd-ad09-2b65ab9ed605" alt="Description" width="300">
