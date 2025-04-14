@@ -1,8 +1,8 @@
 Hi, I'm Vachan!
 
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" /><be>
+<!-- <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" /><be>
 <img src="https://github.com/user-attachments/assets/e173e76b-22a4-46dd-ad09-2b65ab9ed605" alt="Description" width="300">
-
+-->
 # Projects:
 ## [**NeuroForge**](https://github.com/VachanVY/NeuroForge):
 * Implemented Neural Network (Forward and Backward Propagation), Batchnorm and Layernorm, Dropout from scratch just using basic tensor methods
@@ -28,6 +28,7 @@ Hi, I'm Vachan!
 
 
 ## Transformers
+
 ```mermaid
 graph TD;
     Transformers -->|Text| GPT;
