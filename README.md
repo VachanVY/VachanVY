@@ -29,29 +29,6 @@ Hi, I'm Vachan!
 
 ## Transformers
 
-```mermaid
-graph TD;
-    Transformers -->|Text| GPT;
-    Transformers -->|Images| Vision_Transformers["Vision Transformers"];
-    Transformers -->|Audio| MAGNeT["MAGNeT"];
-    Transformers --> |Video| Video_Vision_Transformers["Video Vision Transformers"];
-    Transformers -->|Diffusion| Diffusion_Transformers["Diffusion Transformers"];
-
-    GPT --> Multi_Modal_Transformers["Multi-Modal Transformer"];
-    Vision_Transformers --> Multi_Modal_Transformers;
-    MAGNeT --> Multi_Modal_Transformers;
-    Video_Vision_Transformers --> Multi_Modal_Transformers;
-    Diffusion_Transformers --> Multi_Modal_Transformers;
-
-    Multi_Modal_Transformers --> LLMs["Large Language Models (LLMs)"];
-    RLHF["Reinforcement Learning from Human Feedback (RLHF)"] --> LLMs;
-
-    Reinforcement_Learning --> RLHF;
-
-    LLMs --> Reasoning_LLMs["Reasoning LLMs"];
-    Reinforcement_Learning --> Reasoning_LLMs;
-```
-
 ### [**gpt.jax**](https://github.com/VachanVY/gpt.jax): 
 * GPT written in `jax`, trained on `tiny shakespeare dataset (1.1 MB text data)` and scaled it on the `tiny stories dataset (~2 GB text data)`
   | Model-Params       |`d_model`| `n_heads`  | `maximum_context_length` | `num_layers`  | `vocab_size` | Estimated Validation Loss on tiny stories dataset   |
