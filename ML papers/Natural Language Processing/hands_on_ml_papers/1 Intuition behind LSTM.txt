@@ -1,0 +1,70 @@
+Understanding the intuition behind how and why LSTMs (Long Short-Term Memory) work requires delving into the equations that govern their operations. Let's explore the LSTM equations and their underlying concepts to gain intuition:
+
+1. Input Gate:
+   - The input gate determines how much new information should be stored in the memory cell. It is computed using the following equation:
+     `i_t = sigmoid(W_i * [h_{t-1}, x_t] + b_i)`
+   - The equation combines the previous hidden state `h_{t-1}` and the current input `x_t` to calculate an input gate activation `i_t` using a weighted sum and a bias term. The sigmoid activation function ensures values are between 0 and 1, representing how much information to retain.
+
+2. Forget Gate:
+   - The forget gate decides which information should be forgotten from the memory cell. It is computed using the equation:
+     `f_t = sigmoid(W_f * [h_{t-1}, x_t] + b_f)`
+   - Like the input gate, the forget gate takes the previous hidden state `h_{t-1}` and the current input `x_t`. It calculates a forget gate activation `f_t` that determines which parts of the previous memory cell state to forget.
+
+3. Candidate Memory:
+   - The candidate memory term represents new information to be added to the memory cell. It is computed using the equation:
+     `g_t = tanh(W_g * [h_{t-1}, x_t] + b_g)`
+   - Here, the candidate memory activation `g_t` is obtained by applying the hyperbolic tangent function to a weighted sum of the previous hidden state `h_{t-1}` and the current input `x_t`. The candidate memory represents potentially relevant information to be stored.
+
+4. Update Memory Cell:
+   - The update to the memory cell state occurs using the equation:
+     `C_t = f_t * C_{t-1} + i_t * g_t`
+   - The previous memory cell state `C_{t-1}` is multiplied element-wise by the forget gate activation `f_t`, allowing the LSTM to forget irrelevant information. Simultaneously, the input gate activation `i_t` scales the candidate memory activation `g_t`, determining the new information to be stored.
+
+5. Output Gate:
+   - The output gate controls the flow of information from the memory cell to the output of the LSTM. It is computed using the equation:
+     `o_t = sigmoid(W_o * [h_{t-1}, x_t] + b_o)`
+   - The output gate activation `o_t` is obtained by applying the sigmoid function to a weighted sum of the previous hidden state `h_{t-1}` and the current input `x_t`. It determines how much of the memory cell state should be outputted.
+
+6. Hidden State:
+   - The hidden state represents the output of the LSTM at each time step and is calculated using the equation:
+     `h_t = o_t * tanh(C_t)`
+   - The output gate activation `o_t` scales the hyperbolic tangent of the current memory cell state `C_t`. This results in the hidden state `h_t`, which carries information from previous time steps to the current time step.
+
+By combining these equations, LSTMs can selectively remember or forget information, update the memory cell state, and produce an output at each time step. This architecture enables LSTMs to capture long-term dependencies by allowing relevant information to flow through time while avoiding the vanishing gradient problem.
+
+LSTMs have proven effective in tasks involving sequential data, such as natural language processing, speech recognition, and time series analysis, where capturing long-term
+
+
+############### More intuition on output gates (o) and hidden states (h_t)
+
+Certainly! Let's dive into the intuitive explanation of the output gate and hidden state in LSTM (Long Short-Term Memory) networks, along with their corresponding equations.
+
+Output Gate:
+The output gate in an LSTM determines how much information from the memory cell should be exposed as the output of the LSTM unit. It controls the flow of information from the memory cell to the hidden state/output of the LSTM.
+
+Intuitively, the output gate acts as a filter that allows the LSTM to focus on the relevant information within the memory cell and produce an output accordingly. It determines which parts of the memory cell state should be used to influence the current hidden state and, consequently, the output of the LSTM unit.
+
+The equation for the output gate activation `o_t` is calculated as follows:
+```
+o_t = sigmoid(W_o * [h_{t-1}, x_t] + b_o)
+```
+This equation computes a weighted sum of the previous hidden state `h_{t-1}` and the current input `x_t`. The weights are determined by the learned parameters `W_o` and the bias term `b_o`. The sigmoid activation function ensures that the values of `o_t` are between 0 and 1, representing the strength of the output gate activation.
+
+The output gate activation `o_t` scales the hyperbolic tangent of the current memory cell state (`C_t`) to produce the hidden state/output of the LSTM at time step `t`.
+
+Hidden State:
+The hidden state in an LSTM represents the output of the LSTM unit at each time step. It carries information from previous time steps to the current time step.
+
+Intuitively, the hidden state can be thought of as the "memory" of the LSTM. It encodes relevant information from the previous time steps that the LSTM has deemed important to capture long-term dependencies in the sequence.
+
+The equation for the hidden state `h_t` is calculated as follows:
+```
+h_t = o_t * tanh(C_t)
+```
+Here, `o_t` is the output gate activation calculated previously, and `C_t` represents the current memory cell state. The hyperbolic tangent function (`tanh`) is applied to the memory cell state to transform it into a range between -1 and 1, capturing both positive and negative information.
+
+The hidden state `h_t` is the element-wise product (Hadamard product) of the output gate activation `o_t` and the transformed memory cell state `C_t`. This scaling factor, determined by `o_t`, controls how much of the memory cell state should contribute to the final hidden state/output.
+
+The hidden state `h_t` can then be used for further processing, passed to subsequent LSTM units in a recurrent manner, or used as the final output of the LSTM, depending on the specific task at hand.
+
+In summary, the output gate and hidden state in an LSTM work together to regulate the flow of information from the memory cell and determine the relevant output at each time step. The output gate acts as a filter, controlling the amount of information exposed from the memory cell, while the hidden state captures and carries important information from past time steps to the current time step.
