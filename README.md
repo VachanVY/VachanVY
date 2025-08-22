@@ -5,7 +5,6 @@ Hi, I'm Vachan!
 -->
 # Projects:
 ## [**NeuroForge**](https://github.com/VachanVY/NeuroForge):
-# Contents
 * [Neural Networks](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#neural-networks) => [*nn.ipynb*](https://github.com/VachanVY/NeuroForge/blob/main/nn.ipynb)
   * [Logistic Regression](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
   * [MLP](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
