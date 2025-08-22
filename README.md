@@ -5,12 +5,12 @@ Hi, I'm Vachan!
 -->
 # Projects:
 ## [**NeuroForge**](https://github.com/VachanVY/NeuroForge):
-* Implemented Neural Network (Forward and Backward Propagation), Batchnorm and Layernorm, Dropout from scratch just using basic tensor methods
+# Contents
 * [Neural Networks](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#neural-networks) => [*nn.ipynb*](https://github.com/VachanVY/NeuroForge/blob/main/nn.ipynb)
   * [Logistic Regression](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
   * [MLP](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
-    * [Forward Propagation (Explained on Pen and Paper)](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
-    * [Back Propagation (Equations Derived on Pen and Paper)](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
+    * [Forward Propagation (Explained using Pen and Paper)](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
+    * [Back Propagation (Equations Derived using Pen and Paper)](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
     * [Gradient Descent](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
     * [Train Loop](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
     * [Results](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#results)
@@ -20,11 +20,15 @@ Hi, I'm Vachan!
   * [Comparision](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#comparision)
 * [Dropout: **Why When Where & How?**](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#dropout-paper-deep-learning-book) => [*dropout.ipynb*](https://github.com/VachanVY/NeuroForge/blob/main/dropout.ipynb), [*dropout_scale.ipynb*](https://github.com/VachanVY/NeuroForge/blob/main/dropout_scale.ipynb)
   * [Comparision before and after scaling the model](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#comparision-1) => [*dropout_scale.ipynb*](https://github.com/VachanVY/NeuroForge/blob/main/dropout_scale.ipynb), [nn_scale.ipynb](https://github.com/VachanVY/NeuroForge/blob/main/nn_scale.ipynb)
-* [Adam and AdamW](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#adam-and-adamw-adam-with-weight-decay-optimizers)
-  * [Adam](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#adam-and-adamw-adam-with-weight-decay-optimizers)
-  * [AdamW](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#adam-and-adamw-adam-with-weight-decay-optimizers)
-* [Model Distillation](https://github.com/VachanVY/NeuroForge/tree/main?tab=readme-ov-file#model-distillation-paper-reference) => [*distillation.ipynb*](https://github.com/VachanVY/NeuroForge/blob/main/distillation.ipynb)
-* [Mixture-Of-Experts (MoE) Layers](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#mixture-of-experts-moe-layer)
+* [LeNet: Convolutional Neural Networks from scratch](https://github.com/VachanVY/NeuroForge/tree/main?tab=readme-ov-file#lenet-convolutional-neural-networks-from-scratch) => [*train_lenet.ipynb*](https://github.com/VachanVY/NeuroForge/blob/main/train_lenet.ipynb)
+  * [Basics of Convolutional Operator](https://github.com/VachanVY/NeuroForge/tree/main?tab=readme-ov-file#lenet-convolutional-neural-networks-from-scratch)
+  * [LeNet from scratch: Forward Propagation and Backward Propagation derived using pen & paper and coded](https://github.com/VachanVY/NeuroForge/tree/main#:~:text=My%20notes%20for%20LeNet%20forward%20propagation%20and%20backwards%20propagation)
+* [Neural Network Optimization -- Optimizers 101](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#neural-network-optimization) => [*optim.py* -- custom impl of SGD w-w/o Momentum, RMSProp, Adam, Muon](https://github.com/VachanVY/NeuroForge/blob/main/optimizers/optim.py)
+  * [Momentum](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#momentum) | [Bias Correction](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#bias-correction) | [Adaptive Learning Rate -- RMSProp](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#adaptive-learning-rate) |
+    [Nestrov accelerated gradient](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#nestrov-accelerated-gradient) | [Adam](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#adam) | [Second Order Optimization Methods -- Newton's method](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#second-order-methods)
+  * [**Muon**: an-optimizer-for-hidden-layers-in-neural-networks](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#muon-an-optimizer-for-hidden-layers-in-neural-networks)
+  * [**Benchmarking Muon, Adam, RMSProp, and SGD on CIFAR-10 dataset**](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#benchmarking-optimizers-on-cifar-10)
+  * [More on Adam and AdamW](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#more-on-adam-and-adamw-adam-with-weight-decay-optimizers)
 
 
 ## Transformers
