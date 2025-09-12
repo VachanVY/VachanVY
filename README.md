@@ -3,7 +3,7 @@ Hi, I'm Vachan!
 <!-- <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" /><be>
 <img src="https://github.com/user-attachments/assets/e173e76b-22a4-46dd-ad09-2b65ab9ed605" alt="Description" width="300">
 -->
-# Projects:
+
 ## [**NeuroForge**](https://github.com/VachanVY/NeuroForge):
 * [Neural Networks](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#neural-networks) => [*nn.ipynb*](https://github.com/VachanVY/NeuroForge/blob/main/nn.ipynb)
   * [Logistic Regression](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
