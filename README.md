@@ -1,12 +1,14 @@
 Hi, I'm Vachan!
 
-<!-- <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" /><be>
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" /><be>
 <img src="https://github.com/user-attachments/assets/e173e76b-22a4-46dd-ad09-2b65ab9ed605" alt="Description" width="300">
--->
+
 
 ## [**NeuroForge**](https://github.com/VachanVY/NeuroForge):
 * [Neural Networks](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#neural-networks) => [*nn.ipynb*](https://github.com/VachanVY/NeuroForge/blob/main/nn.ipynb)
-  * [Logistic Regression](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
+  * [Logistic Regression](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression) => [*logistic_regression.ipynb*](https://github.com/VachanVY/NeuroForge/blob/main/logistic_regression.ipynb)
+    * [Forward Propagation, Back Propagation Equations Derived — trained using gradient descent](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
+    * [Why you shouldn't use `sigmoid` activation in *hidden* layers in Neural Networks](https://github.com/VachanVY/NeuroForge/tree/main?tab=readme-ov-file#why-you-shouldnt-use-sigmoid-activation-in-hidden-layers-in-neural-networks)
   * [MLP](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
     * [Forward Propagation (Explained using Pen and Paper)](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
     * [Back Propagation (Equations Derived using Pen and Paper)](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
@@ -22,9 +24,9 @@ Hi, I'm Vachan!
 * [LeNet: Convolutional Neural Networks from scratch](https://github.com/VachanVY/NeuroForge/tree/main?tab=readme-ov-file#lenet-convolutional-neural-networks-from-scratch) => [*train_lenet.ipynb*](https://github.com/VachanVY/NeuroForge/blob/main/train_lenet.ipynb)
   * [Basics of Convolutional Operator](https://github.com/VachanVY/NeuroForge/tree/main?tab=readme-ov-file#lenet-convolutional-neural-networks-from-scratch)
   * [LeNet from scratch: Forward Propagation and Backward Propagation derived using pen & paper and coded](https://github.com/VachanVY/NeuroForge/tree/main#:~:text=My%20notes%20for%20LeNet%20forward%20propagation%20and%20backwards%20propagation)
-* [Neural Network Optimization](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#neural-network-optimization) => [*optim.py* -- custom impl of SGD w-w/o Momentum, RMSProp, Adam, Muon](https://github.com/VachanVY/NeuroForge/blob/main/optimizers/optim.py)
-  * [Momentum](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#momentum) | [Bias Correction](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#bias-correction) | [Adaptive Learning Rate -- RMSProp](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#adaptive-learning-rate) |
-    [Nestrov accelerated gradient](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#nestrov-accelerated-gradient) | [Adam](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#adam) | [Second Order Optimization Methods -- Newton's method](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#second-order-methods)
+* [Neural Network Optimization](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#neural-network-optimization) => [*optim.py* — custom impl of SGD w-w/o Momentum, RMSProp, Adam, Muon](https://github.com/VachanVY/NeuroForge/blob/main/optimizers/optim.py)
+  * [Momentum](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#momentum) | [Bias Correction](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#bias-correction) | [Adaptive Learning Rate — RMSProp](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#adaptive-learning-rate) |
+    [Nestrov accelerated gradient](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#nestrov-accelerated-gradient) | [Adam](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#adam) | [Second Order Optimization Methods — Newton's method](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#second-order-methods)
   * [**Muon**: an-optimizer-for-hidden-layers-in-neural-networks](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#muon-an-optimizer-for-hidden-layers-in-neural-networks)
   * [**Benchmarking Muon, Adam, RMSProp, and SGD on CIFAR-10 dataset**](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#benchmarking-optimizers-on-cifar-10)
   * [More on Adam and AdamW](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#more-on-adam-and-adamw-adam-with-weight-decay-optimizers)
