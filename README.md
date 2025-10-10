@@ -31,7 +31,7 @@ Hi, I'm Vachan!
   * [**Benchmarking Muon, Adam, RMSProp, and SGD on CIFAR-10 dataset**](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#benchmarking-optimizers-on-cifar-10)
   * [More on Adam and AdamW](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#more-on-adam-and-adamw-adam-with-weight-decay-optimizers)
 
-
+<!--
 ## Transformers
 
 ### [**gpt.jax**](https://github.com/VachanVY/gpt.jax): 
@@ -69,6 +69,8 @@ Hi, I'm Vachan!
     <img src="https://github.com/user-attachments/assets/2048e0ba-4ebd-48f1-a379-df39680495f9" alt="Alt text" width="300">
     <img src="https://github.com/user-attachments/assets/e7bea3b5-ce52-4de6-a03e-a7694e66b320" alt="Alt text" width="300">
     <img src="https://github.com/user-attachments/assets/fe7d1f7d-f7a8-4059-a1f2-172a0e2345d5" alt="Alt text" width="300">
+
+-->
 
 ## Algorithms from Reinforcement Learning: An Introduction by Andrew Barto and Richard S. Sutton
 
