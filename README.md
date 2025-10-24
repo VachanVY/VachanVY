@@ -1,5 +1,12 @@
 Hi, I'm Vachan!
 
+<!-- 
+![Vachan's GitHub Stats](https://github-readme-stats.vercel.app/api?username=VachanVY&show_icons=true&theme=tokyonight&count_private=true)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=VachanVY&layout=compact&theme=tokyonight)
+
+![GitHub Streak](https://streak-stats.demolab.com?user=VachanVY&theme=tokyonight&hide_border=true)
+-->
+
 <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" /><be>
 <img src="https://github.com/user-attachments/assets/e173e76b-22a4-46dd-ad09-2b65ab9ed605" alt="Description" width="300">
 
@@ -181,9 +188,11 @@ Hi, I'm Vachan!
 * **`TODO`: Train on a large Multi-Modal Dataset (something like tiny stories dataset with images in between illustrating the story...?)**
 -->
 
-<img  src="https://github-profile-trophy.vercel.app/?username=VachanVY&theme=gruvbox&row=1&column=6&no-frame=true&no-bg=true" /><br>
+![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=VachanVY&theme=tokyonight&no-frame=true&no-bg=true&margin-w=15)
 
+<!--
 <img height="137px" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=VachanVY&hide_title=true&hide_border=true&show_icons=trueline_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" />
 
 <img height="137px" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=VachanVY&hide_title=true&hide_border=true&layout=compact&langs_count=6&text_color=000&icon_color=fff&bg_color=0,52fa5a,4dfcff,c64dff&theme=graywhite" /><br><br>
+-->
 
