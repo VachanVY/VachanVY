@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post - Simple Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Simple Blog</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="new-post.html">New Post</a>
+        </nav>
+    </header>
+
+    <main>
+        <article id="post-content"></article>
+        
+        <div class="comments-section">
+            <h3>Comments</h3>
+            <div id="comments-list"></div>
+            
+            <div class="comment-form">
+                <h4>Add a Comment</h4>
+                <form id="comment-form">
+                    <div class="form-group">
+                        <input type="text" id="comment-author" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="comment-text" rows="3" placeholder="Your comment" required></textarea>
+                    </div>
+                    <button type="submit">Post Comment</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const postId = urlParams.get('id');
+        let currentPost = null;
+        let replyingTo = null;
+
+        if (!postId) {
+            document.getElementById('post-content').innerHTML = '<p>Post not found.</p>';
+        }
+
+        async function loadPost() {
+            try {
+                const response = await fetch('api/get_post.php?id=' + postId);
+                const post = await response.json();
+                
+                if (post.error) {
+                    document.getElementById('post-content').innerHTML = '<p>Post not found.</p>';
+                    return;
+                }
+                
+                currentPost = post;
+                const date = new Date(post.created_at).toLocaleDateString();
+                const imageHtml = post.image ? `<img src="${post.image}" alt="${post.title}">` : '';
+                
+                document.getElementById('post-content').innerHTML = `
+                    <h2>${post.title}</h2>
+                    <div class="post-meta">
+                        <span>By ${post.author}</span>
+                        <span>${date}</span>
+                    </div>
+                    ${imageHtml}
+                    <div class="post-body">${post.content}</div>
+                    <button id="like-btn" class="like-btn">❤️ Like (${post.like_count})</button>
+                `;
+                
+                document.getElementById('like-btn').addEventListener('click', likePost);
+            } catch (error) {
+                console.error('Error loading post:', error);
+                document.getElementById('post-content').innerHTML = '<p>Error loading post.</p>';
+            }
+        }
+
+        async function likePost() {
+            const btn = document.getElementById('like-btn');
+            btn.disabled = true;
+            
+            try {
+                const response = await fetch('api/like_post.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ id: postId })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    btn.textContent = `❤️ Like (${result.like_count})`;
+                }
+                
+                btn.disabled = false;
+            } catch (error) {
+                console.error('Error liking post:', error);
+                btn.disabled = false;
+            }
+        }
+
+        async function loadComments() {
+            try {
+                const response = await fetch('api/get_comments.php?post_id=' + postId);
+                const comments = await response.json();
+                
+                const container = document.getElementById('comments-list');
+                
+                if (comments.length === 0) {
+                    container.innerHTML = '<p class="no-comments">No comments yet. Be the first to comment!</p>';
+                    return;
+                }
+                
+                // Separate parent comments and replies
+                const parentComments = comments.filter(c => !c.parent_id);
+                const replies = comments.filter(c => c.parent_id);
+                
+                container.innerHTML = parentComments.map(comment => {
+                    const commentReplies = replies.filter(r => r.parent_id == comment.id);
+                    return renderComment(comment, commentReplies);
+                }).join('');
+                
+                // Add event listeners to reply buttons
+                document.querySelectorAll('.reply-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const commentId = e.target.dataset.commentId;
+                        const commentAuthor = e.target.dataset.commentAuthor;
+                        startReply(commentId, commentAuthor);
+                    });
+                });
+            } catch (error) {
+                console.error('Error loading comments:', error);
+            }
+        }
+        
+        function renderComment(comment, replies = []) {
+            const date = new Date(comment.created_at).toLocaleDateString();
+            const authorBadge = comment.is_author == 1 ? '<span class="author-badge">Author</span>' : '';
+            const isAuthor = currentPost && comment.author === currentPost.author;
+            
+            let repliesHtml = '';
+            if (replies.length > 0) {
+                repliesHtml = '<div class="replies">' + replies.map(reply => {
+                    const replyDate = new Date(reply.created_at).toLocaleDateString();
+                    const replyAuthorBadge = reply.is_author == 1 ? '<span class="author-badge">Author</span>' : '';
+                    return `
+                        <div class="comment reply">
+                            <div class="comment-header">
+                                <strong>${reply.author}</strong>
+                                ${replyAuthorBadge}
+                                <span class="comment-date">${replyDate}</span>
+                            </div>
+                            <p>${reply.comment}</p>
+                        </div>
+                    `;
+                }).join('') + '</div>';
+            }
+            
+            return `
+                <div class="comment">
+                    <div class="comment-header">
+                        <strong>${comment.author}</strong>
+                        ${authorBadge}
+                        <span class="comment-date">${date}</span>
+                    </div>
+                    <p>${comment.comment}</p>
+                    <button class="reply-btn" data-comment-id="${comment.id}" data-comment-author="${comment.author}">Reply</button>
+                    ${repliesHtml}
+                </div>
+            `;
+        }
+        
+        function startReply(commentId, commentAuthor) {
+            replyingTo = { id: commentId, author: commentAuthor };
+            document.getElementById('comment-form').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('comment-text').focus();
+            document.getElementById('comment-text').placeholder = `Replying to ${commentAuthor}...`;
+            
+            // Show cancel button if not already shown
+            if (!document.getElementById('cancel-reply-btn')) {
+                const cancelBtn = document.createElement('button');
+                cancelBtn.id = 'cancel-reply-btn';
+                cancelBtn.type = 'button';
+                cancelBtn.textContent = 'Cancel Reply';
+                cancelBtn.onclick = cancelReply;
+                document.querySelector('#comment-form button[type="submit"]').after(cancelBtn);
+            }
+        }
+        
+        function cancelReply() {
+            replyingTo = null;
+            document.getElementById('comment-text').placeholder = 'Your comment';
+            const cancelBtn = document.getElementById('cancel-reply-btn');
+            if (cancelBtn) cancelBtn.remove();
+        }
+
+        document.getElementById('comment-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitButton = e.target.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Posting...';
+            
+            const author = document.getElementById('comment-author').value;
+            const isAuthor = currentPost && author === currentPost.author;
+            
+            const commentData = {
+                post_id: postId,
+                author: author,
+                comment: document.getElementById('comment-text').value,
+                parent_id: replyingTo ? replyingTo.id : null,
+                is_author: isAuthor
+            };
+            
+            try {
+                const response = await fetch('api/create_comment.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(commentData)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    document.getElementById('comment-author').value = '';
+                    document.getElementById('comment-text').value = '';
+                    document.getElementById('comment-text').placeholder = 'Your comment';
+                    cancelReply();
+                    loadComments();
+                }
+                
+                submitButton.disabled = false;
+                submitButton.textContent = 'Post Comment';
+            } catch (error) {
+                console.error('Error posting comment:', error);
+                submitButton.disabled = false;
+                submitButton.textContent = 'Post Comment';
+            }
+        });
+
+        loadPost();
+        loadComments();
+    </script>
+</body>
+</html>

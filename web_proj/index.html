@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Simple Blog</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="new-post.html">New Post</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="posts-container"></div>
+    </main>
+
+    <script>
+        async function loadPosts() {
+            try {
+                const response = await fetch('api/get_posts.php');
+                const posts = await response.json();
+                
+                const container = document.getElementById('posts-container');
+                
+                if (posts.length === 0) {
+                    container.innerHTML = '<p>No posts yet. <a href="new-post.html">Create one!</a></p>';
+                    return;
+                }
+                
+                container.innerHTML = posts.map(post => {
+                    const preview = post.content.substring(0, 150) + (post.content.length > 150 ? '...' : '');
+                    const date = new Date(post.created_at).toLocaleDateString();
+                    
+                    return `
+                        <article class="post-preview">
+                            <h2><a href="post.html?id=${post.id}">${post.title}</a></h2>
+                            <div class="post-meta">
+                                <span>By ${post.author}</span>
+                                <span>${date}</span>
+                                <span>❤️ ${post.like_count}</span>
+                            </div>
+                            <p>${preview}</p>
+                            <a href="post.html?id=${post.id}" class="read-more">Read more →</a>
+                        </article>
+                    `;
+                }).join('');
+            } catch (error) {
+                console.error('Error loading posts:', error);
+                document.getElementById('posts-container').innerHTML = '<p>Error loading posts.</p>';
+            }
+        }
+
+        loadPosts();
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Post - Simple Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Simple Blog</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="new-post.html">New Post</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Create New Post</h2>
+            <form id="post-form">
+                <div class="form-group">
+                    <label for="author">Your Name</label>
+                    <input type="text" id="author" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="title">Post Title</label>
+                    <input type="text" id="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="image">Image URL (optional)</label>
+                    <input type="text" id="image">
+                </div>
+                
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <textarea id="content" rows="10" required></textarea>
+                </div>
+                
+                <button type="submit">Publish Post</button>
+            </form>
+            <div id="message"></div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('post-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitButton = e.target.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Publishing...';
+            
+            const postData = {
+                title: document.getElementById('title').value,
+                content: document.getElementById('content').value,
+                author: document.getElementById('author').value,
+                image: document.getElementById('image').value || null
+            };
+            
+            try {
+                const response = await fetch('api/create_post.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(postData)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    document.getElementById('message').innerHTML = '<p class="success">Post published successfully!</p>';
+                    setTimeout(() => {
+                        window.location.href = 'post.html?id=' + result.id;
+                    }, 1000);
+                } else {
+                    document.getElementById('message').innerHTML = '<p class="error">Error: ' + result.error + '</p>';
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Publish Post';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('message').innerHTML = '<p class="error">Error creating post.</p>';
+                submitButton.disabled = false;
+                submitButton.textContent = 'Publish Post';
+            }
+        });
+    </script>
+</body>
+</html>
