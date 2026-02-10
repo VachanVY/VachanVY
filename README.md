@@ -661,7 +661,7 @@ main:
   <summary>NeuroForge</summary> -->
 
 
-## [**NeuroForge**](https://github.com/VachanVY/NeuroForge):
+# [**NeuroForge**](https://github.com/VachanVY/NeuroForge):
 * [Neural Networks](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#neural-networks) => [*nn.ipynb*](https://github.com/VachanVY/NeuroForge/blob/main/nn.ipynb)
   * [Logistic Regression](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression) => [*logistic_regression.ipynb*](https://github.com/VachanVY/NeuroForge/blob/main/logistic_regression.ipynb)
     * [Forward Propagation, Back Propagation Equations Derived — trained using gradient descent](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#logistic-regression)
