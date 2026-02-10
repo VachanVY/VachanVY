@@ -10,6 +10,656 @@ Hi, I'm Vachan!
 <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" /><be>
 <img src="https://github.com/user-attachments/assets/e173e76b-22a4-46dd-ad09-2b65ab9ed605" alt="Description" width="300">
 
+# [nanocc](https://github.com/VachanVY/nanocc)
+
+<img width="964" height="371" alt="image" src="https://github.com/user-attachments/assets/d9d512e6-b41d-40e3-b140-81b943754c77" />
+
+* A minimal implementation of a tiny subset of the C language in C and C++23
+
+## nanocc progress
+```c
+int putchar(int c);
+
+ // return type, only int is supported as of now
+int putint(int x) {
+    if (x < 0) {
+        putchar(45);  // ASCII '-'
+        x = -x;
+    }
+
+    if (x >= 10)
+        putint(x / 10);
+
+    putchar(48 + (x % 10));  // ASCII '0' = 48
+    return 0;
+}
+
+int factorial(int n) {
+    int ret;
+    if (n <= 1) {
+        ret = 1;
+    } else {
+        ret = n * factorial(n - 1);
+    }
+    return ret;
+}
+
+int main(void) {
+    // "Hello, World!" using only integers
+    putchar(72);    putchar(101);    putchar(108);    
+    putchar(108);    putchar(111);    putchar(44);
+    putchar(32);    putchar(87);    putchar(111);    
+    putchar(114);    putchar(108);    putchar(100);
+    putchar(33);    putchar(10);
+
+    for (int i = 1; i <= 5; i = i + 1) {
+        int fact = factorial(i);
+        putint(i); /*space*/ putchar(32); 
+        putint(fact); /*newline*/ putchar(10);
+    }
+    return 0;
+}
+```
+
+<details>
+  <summary>Abstract Syntax Tree</summary>
+
+```
+Program(
+  Function(
+    name='putchar'
+    Parameters(
+      name='c.0'
+    )
+  )
+  Function(
+    name='putint'
+    Parameters(
+      name='x.1'
+    )
+    body=(
+      Block(
+        IfElse(
+          Binary(<,
+            Var(name='x.1')
+            Constant(0)
+          )
+          Block(
+            Expression(
+              FunctionCall(
+                name='putchar'
+                args(
+                  Constant(45)
+                )
+              )
+            )
+            Expression(
+              Assignment(
+                Var(name='x.1')
+                Unary(-
+                  Var(name='x.1')
+                )
+              )
+            )
+          )
+        )
+        IfElse(
+          Binary(>=,
+            Var(name='x.1')
+            Constant(10)
+          )
+          Expression(
+            FunctionCall(
+              name='putint'
+              args(
+                Binary(/,
+                  Var(name='x.1')
+                  Constant(10)
+                )
+              )
+            )
+          )
+        )
+        Expression(
+          FunctionCall(
+            name='putchar'
+            args(
+              Binary(+,
+                Constant(48)
+                Binary(%,
+                  Var(name='x.1')
+                  Constant(10)
+                )
+              )
+            )
+          )
+        )
+        Return(
+          Constant(0)
+        )
+      )
+    )
+  )
+  Function(
+    name='factorial'
+    Parameters(
+      name='n.2'
+    )
+    body=(
+      Block(
+        Declaration(
+          name='ret.3')
+        IfElse(
+          Binary(<=,
+            Var(name='n.2')
+            Constant(1)
+          )
+          Block(
+            Expression(
+              Assignment(
+                Var(name='ret.3')
+                Constant(1)
+              )
+            )
+          )
+          Block(
+            Expression(
+              Assignment(
+                Var(name='ret.3')
+                Binary(*,
+                  Var(name='n.2')
+                  FunctionCall(
+                    name='factorial'
+                    args(
+                      Binary(-,
+                        Var(name='n.2')
+                        Constant(1)
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+        Return(
+          Var(name='ret.3')
+        )
+      )
+    )
+  )
+  Function(
+    name='main'
+    Parameters()
+    body=(
+      Block(
+        Expression(
+          FunctionCall(
+            name='putchar'
+            args(
+              Constant(72)
+            )
+          )
+        )
+        Expression(
+          FunctionCall(
+            name='putchar'
+            args(
+              Constant(101)
+            )
+          )
+        )
+        Expression(
+          FunctionCall(
+            name='putchar'
+            args(
+              Constant(108)
+            )
+          )
+        )
+        Expression(
+          FunctionCall(
+            name='putchar'
+            args(
+              Constant(108)
+            )
+          )
+        )
+        Expression(
+          FunctionCall(
+            name='putchar'
+            args(
+              Constant(111)
+            )
+          )
+        )
+        Expression(
+          FunctionCall(
+            name='putchar'
+            args(
+              Constant(44)
+            )
+          )
+        )
+        Expression(
+          FunctionCall(
+            name='putchar'
+            args(
+              Constant(32)
+            )
+          )
+        )
+        Expression(
+          FunctionCall(
+            name='putchar'
+            args(
+              Constant(87)
+            )
+          )
+        )
+        Expression(
+          FunctionCall(
+            name='putchar'
+            args(
+              Constant(111)
+            )
+          )
+        )
+        Expression(
+          FunctionCall(
+            name='putchar'
+            args(
+              Constant(114)
+            )
+          )
+        )
+        Expression(
+          FunctionCall(
+            name='putchar'
+            args(
+              Constant(108)
+            )
+          )
+        )
+        Expression(
+          FunctionCall(
+            name='putchar'
+            args(
+              Constant(100)
+            )
+          )
+        )
+        Expression(
+          FunctionCall(
+            name='putchar'
+            args(
+              Constant(33)
+            )
+          )
+        )
+        Expression(
+          FunctionCall(
+            name='putchar'
+            args(
+              Constant(10)
+            )
+          )
+        )
+        For(name='for.0'
+          Init:
+            Declaration(
+              name='i.4'
+              Constant(1)
+            )
+          Condition:
+            Binary(<=,
+              Var(name='i.4')
+              Constant(5)
+            )
+          Post:
+            Assignment(
+              Var(name='i.4')
+              Binary(+,
+                Var(name='i.4')
+                Constant(1)
+              )
+            )
+          ForLoopBody:
+            Block(
+              Declaration(
+                name='fact.5'
+                FunctionCall(
+                  name='factorial'
+                  args(
+                    Var(name='i.4')
+                  )
+                )
+              )
+              Expression(
+                FunctionCall(
+                  name='putint'
+                  args(
+                    Var(name='i.4')
+                  )
+                )
+              )
+              Expression(
+                FunctionCall(
+                  name='putchar'
+                  args(
+                    Constant(32)
+                  )
+                )
+              )
+              Expression(
+                FunctionCall(
+                  name='putint'
+                  args(
+                    Var(name='fact.5')
+                  )
+                )
+              )
+              Expression(
+                FunctionCall(
+                  name='putchar'
+                  args(
+                    Constant(10)
+                  )
+                )
+              )
+            )
+        )
+        Return(
+          Constant(0)
+        )
+      )
+    )
+  )
+)
+```
+</details>
+
+<details>
+<summary>Generated Intermeddiate Representation and Assembly</summary>
+
+ ```asm
+# ----------- IR Generation -----------
+# Function[
+#  name='putint'
+#  parameters=[
+#    'x.1'
+#  ]
+#   instructions=[
+#     tmp.6 = x.1 < 0
+#     jump_if_false tmp.6, end.1
+#     tmp.7 = putchar(45)
+#     tmp.8 = - x.1
+#     x.1 = tmp.8
+#   end.1:
+#     tmp.9 = x.1 >= 10
+#     jump_if_false tmp.9, end.2
+#     tmp.10 = x.1 / 10
+#     tmp.11 = putint(tmp.10)
+#   end.2:
+#     tmp.12 = x.1 % 10
+#     tmp.13 = 48 + tmp.12
+#     tmp.14 = putchar(tmp.13)
+#     return 0
+#     return 0
+#   ]
+# ]
+# Function[
+#   name='factorial'
+#   parameters=[
+#     'n.2'
+#   ]
+#   instructions=[
+#     tmp.15 = n.2 <= 1
+#     jump_if_false tmp.15, else.3
+#     ret.3 = 1
+#     jump end.4
+#   else.3:
+#     tmp.16 = n.2 - 1
+#     tmp.17 = factorial(tmp.16)
+#     tmp.18 = n.2 * tmp.17
+#     ret.3 = tmp.18
+#   end.4:
+#     return ret.3
+#     return 0
+#   ]
+# ]
+# Function[
+#   name='main'
+#   parameters=[]
+#   instructions=[
+#     tmp.19 = putchar(72)
+#     tmp.20 = putchar(101)
+#     tmp.21 = putchar(108)
+#     tmp.22 = putchar(108)
+#     tmp.23 = putchar(111)
+#     tmp.24 = putchar(44)
+#     tmp.25 = putchar(32)
+#     tmp.26 = putchar(87)
+#     tmp.27 = putchar(111)
+#     tmp.28 = putchar(114)
+#     tmp.29 = putchar(108)
+#     tmp.30 = putchar(100)
+#     tmp.31 = putchar(33)
+#     tmp.32 = putchar(10)
+#     i.4 = 1
+#   start_for.0:
+#     tmp.33 = i.4 <= 5
+#     jump_if_false tmp.33, break_for.0
+#     tmp.34 = factorial(i.4)
+#     fact.5 = tmp.34
+#     tmp.35 = putint(i.4)
+#     tmp.36 = putchar(32)
+#     tmp.37 = putint(fact.5)
+#     tmp.38 = putchar(10)
+#   continue_for.0:
+#     tmp.39 = i.4 + 1
+#     i.4 = tmp.39
+#     jump start_for.0
+#   break_for.0:
+#     return 0
+#     return 0
+#   ]
+# ]
+# -------------------------------------
+
+
+     .globl putint
+putint:
+    pushq %rbp
+    movq %rsp, %rbp
+    subq $48, %rsp
+    movl %edi, -4(%rbp)
+    cmpl $0, -4(%rbp)
+    movl $0, -8(%rbp)
+    setl -8(%rbp)
+    cmpl $0, -8(%rbp)
+    je end.1
+    movl $45, %edi
+    call putchar@PLT
+    movl %eax, -12(%rbp)
+    movl -4(%rbp), %r10d
+    movl %r10d, -16(%rbp)
+    negl -16(%rbp)
+    movl -16(%rbp), %r10d
+    movl %r10d, -4(%rbp)
+  end.1:
+    cmpl $10, -4(%rbp)
+    movl $0, -20(%rbp)
+    setge -20(%rbp)
+    cmpl $0, -20(%rbp)
+    je end.2
+    movl -4(%rbp), %eax
+    cdq
+    movl $10, %r10d
+    idivl %r10d
+    movl %eax, -24(%rbp)
+    movl -24(%rbp), %edi
+    call putint
+    movl %eax, -28(%rbp)
+  end.2:
+    movl -4(%rbp), %eax
+    cdq
+    movl $10, %r10d
+    idivl %r10d
+    movl %edx, -32(%rbp)
+    movl $48, -36(%rbp)
+    movl -32(%rbp), %r10d
+    addl %r10d, -36(%rbp)
+    movl -36(%rbp), %edi
+    call putchar@PLT
+    movl %eax, -40(%rbp)
+    movl $0, %eax
+    movq %rbp, %rsp
+    popq %rbp
+    ret
+
+    movl $0, %eax
+    movq %rbp, %rsp
+    popq %rbp
+    ret
+
+    .globl factorial
+factorial:
+    pushq %rbp
+    movq %rsp, %rbp
+    subq $32, %rsp
+    movl %edi, -4(%rbp)
+    cmpl $1, -4(%rbp)
+    movl $0, -8(%rbp)
+    setle -8(%rbp)
+    cmpl $0, -8(%rbp)
+    je else.3
+    movl $1, -12(%rbp)
+    jmp end.4
+  else.3:
+    movl -4(%rbp), %r10d
+    movl %r10d, -16(%rbp)
+    subl $1, -16(%rbp)
+    movl -16(%rbp), %edi
+    call factorial
+    movl %eax, -20(%rbp)
+    movl -4(%rbp), %r10d
+    movl %r10d, -24(%rbp)
+    movl -24(%rbp), %r11d
+    imull -20(%rbp), %r11d
+    movl %r11d, -24(%rbp)
+    movl -24(%rbp), %r10d
+    movl %r10d, -12(%rbp)
+  end.4:
+    movl -12(%rbp), %eax
+    movq %rbp, %rsp
+    popq %rbp
+    ret
+
+    movl $0, %eax
+    movq %rbp, %rsp
+    popq %rbp
+    ret
+
+    .globl main
+main:
+    pushq %rbp
+    movq %rsp, %rbp
+    subq $96, %rsp
+    movl $72, %edi
+    call putchar@PLT
+    movl %eax, -4(%rbp)
+    movl $101, %edi
+    call putchar@PLT
+    movl %eax, -8(%rbp)
+    movl $108, %edi
+    call putchar@PLT
+    movl %eax, -12(%rbp)
+    movl $108, %edi
+    call putchar@PLT
+    movl %eax, -16(%rbp)
+    movl $111, %edi
+    call putchar@PLT
+    movl %eax, -20(%rbp)
+    movl $44, %edi
+    call putchar@PLT
+    movl %eax, -24(%rbp)
+    movl $32, %edi
+    call putchar@PLT
+    movl %eax, -28(%rbp)
+    movl $87, %edi
+    call putchar@PLT
+    movl %eax, -32(%rbp)
+    movl $111, %edi
+    call putchar@PLT
+    movl %eax, -36(%rbp)
+    movl $114, %edi
+    call putchar@PLT
+    movl %eax, -40(%rbp)
+    movl $108, %edi
+    call putchar@PLT
+    movl %eax, -44(%rbp)
+    movl $100, %edi
+    call putchar@PLT
+    movl %eax, -48(%rbp)
+    movl $33, %edi
+    call putchar@PLT
+    movl %eax, -52(%rbp)
+    movl $10, %edi
+    call putchar@PLT
+    movl %eax, -56(%rbp)
+    movl $1, -60(%rbp)
+  start_for.0:
+    cmpl $5, -60(%rbp)
+    movl $0, -64(%rbp)
+    setle -64(%rbp)
+    cmpl $0, -64(%rbp)
+    je break_for.0
+    movl -60(%rbp), %edi
+    call factorial
+    movl %eax, -68(%rbp)
+    movl -68(%rbp), %r10d
+    movl %r10d, -72(%rbp)
+    movl -60(%rbp), %edi
+    call putint
+    movl %eax, -76(%rbp)
+    movl $32, %edi
+    call putchar@PLT
+    movl %eax, -80(%rbp)
+    movl -72(%rbp), %edi
+    call putint
+    movl %eax, -84(%rbp)
+    movl $10, %edi
+    call putchar@PLT
+    movl %eax, -88(%rbp)
+  continue_for.0:
+    movl -60(%rbp), %r10d
+    movl %r10d, -92(%rbp)
+    addl $1, -92(%rbp)
+    movl -92(%rbp), %r10d
+    movl %r10d, -60(%rbp)
+    jmp start_for.0
+  break_for.0:
+    movl $0, %eax
+    movq %rbp, %rsp
+    popq %rbp
+    ret
+
+    movl $0, %eax
+    movq %rbp, %rsp
+    popq %rbp
+    ret
+
+    .section .note.GNU-stack, "",@progbits
+```
+
+</details>
+
+
+
+<!-- <details>
+  <summary>NeuroForge</summary> -->
+
 
 ## [**NeuroForge**](https://github.com/VachanVY/NeuroForge):
 * [Neural Networks](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#neural-networks) => [*nn.ipynb*](https://github.com/VachanVY/NeuroForge/blob/main/nn.ipynb)
@@ -38,6 +688,10 @@ Hi, I'm Vachan!
   * [**Benchmarking Muon, Adam, RMSProp, and SGD on CIFAR-10 dataset**](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#benchmarking-optimizers-on-cifar-10)
   * [More on Adam and AdamW](https://github.com/VachanVY/NeuroForge?tab=readme-ov-file#more-on-adam-and-adamw-adam-with-weight-decay-optimizers)
 
+<!-- </details> -->
+
+
+ 
 <!--
 ## Transformers
 
@@ -79,6 +733,11 @@ Hi, I'm Vachan!
 
 -->
 
+# Reinforcement Learning
+
+<details>
+  <summary> </summary>
+ 
 ## Algorithms from Reinforcement Learning: An Introduction by Andrew Barto and Richard S. Sutton
 
 | **Algorithms**                          | **Environment (Name & Goal)**               | **Environment GIF**                           | **Plots**               |
@@ -112,6 +771,7 @@ Hi, I'm Vachan!
 | 2020     | [Mastering Atari, Go, Chess and Shogi with a Learned Model](#)  | Multiple Environments (Planning with Models)| -                | ! -   |
 | 20xx     | [AlphaFold](#)                                                  | Protein Folding - Predict protein structures| -     | -   | -->
 
+</details>
 
 
 <!-- ### [**ViViT**](https://github.com/VachanVY/ViVIT):
@@ -183,7 +843,6 @@ Hi, I'm Vachan!
 * **`TODO`: Train on a large Multi-Modal Dataset (something like tiny stories dataset with images in between illustrating the story...?)**
 -->
 
-![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=VachanVY&theme=tokyonight&no-frame=true&no-bg=true&margin-w=15)
 
 <!--
 <img height="137px" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=VachanVY&hide_title=true&hide_border=true&show_icons=trueline_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" />
